@@ -1,6 +1,6 @@
 package boilerplate.vector.third;
 
-public class AbstractVector {
+public class AbstractVector implements Vector {
     
     String toString(){
         
