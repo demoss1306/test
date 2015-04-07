@@ -1,6 +1,23 @@
 package boilerplate.vector.third;
 
-public class Vector {
+public class AbstractVector {
+    
+    String toString(){
+        
+    }
+    
+    boolean equals(Object){
+        
+    }
+    
+    int hashCode(){
+        
+    }
+    
+    Object clone(){
+        
+    }
+    
     public int size() {
         return 0;
     }
