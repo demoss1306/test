@@ -9,7 +9,7 @@ public abstract class Vector implements Cloneable{
 
     abstract public void set(int index, double value);
     
-    abstract public Vector clone() throws CloneNotSupportedException;
+    abstract public Vector clone();
 
     public int indexOf(double value) {
         for (int i = 0; i < size(); i++) {
