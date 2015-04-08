@@ -29,13 +29,10 @@ public class ListVector extends Vector {
     }
     
     @Override
-    public static hashCode (){
+    public int hashCode (){
         final int constant = 7;
-        int result = 1;
-        Node tempNode = firstNode;
-        for (int i = 0; i < size(); i++){
-            result = result * constatnt + get(i).value;
-        }
+        int result = 7;
+        result = result * constant + (firstNode == null ? 0 : fistNode.hashCode());
         return result;
     }
     
@@ -47,7 +44,15 @@ public class ListVector extends Vector {
         if (firstNode.equals(otherVector.firstNode)) return true;
         else return false;
     }
-
+    
+    @Override
+    public String toString(){
+        return (getClass().getName());
+    }
+    
+    @Override
+    public Object clone() extends 
+    
     public int size() {
         Node tempNode = firstNode;
         for (int size = 0; ; size++)
