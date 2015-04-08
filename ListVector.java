@@ -27,6 +27,26 @@ public class ListVector extends Vector {
             }
         }
     }
+    
+    @Override
+    public static hashCode (){
+        final int constant = 7;
+        int result = 1;
+        Node tempNode = firstNode;
+        for (int i = 0; i < size(); i++){
+            result = result * constatnt + get(i).value;
+        }
+        return result;
+    }
+    
+    @Override
+    public boolean equals (Object otherObject){
+        if (this == otherObject) return true;
+        if ((otherObject == null) || (getClass() != otherObject.getClass())) return false;
+        ListVector otherVector = (ListVector)otherObject;
+        if (firstNode.equals(otherVector.firstNode)) return true;
+        else return false;
+    }
 
     public int size() {
         Node tempNode = firstNode;
