@@ -1,6 +1,6 @@
 package allatra.test;
 
-public abstract class Vector {
+public abstract class Vector implements Cloneable{
 
 
     abstract public int size();
@@ -8,6 +8,8 @@ public abstract class Vector {
     abstract public double get(int index);
 
     abstract public void set(int index, double value);
+    
+    abstract public Vector clone() throws CloneNotSupportedException;
 
     public int indexOf(double value) {
         for (int i = 0; i < size(); i++) {
