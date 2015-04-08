@@ -47,11 +47,18 @@ public class ListVector extends Vector {
     
     @Override
     public String toString(){
-        return (getClass().getName());
+        String vectorName = this.name + " {";
+        for (i = 0; i < size(); i++)
+            vectorName +=  getValue(i) + " ";
+        return  vectorName + "}";
     }
     
     @Override
-    public Object clone() extends 
+    public ListVector clone() throws CloneNotSupportedException {
+        ListVector vector = (ListVector)super.clone();
+        vector.produced = produced.clone();
+        return vector;
+    }
     
     public int size() {
         Node tempNode = firstNode;
